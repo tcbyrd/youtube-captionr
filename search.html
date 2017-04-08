@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Search</title>
+    <link rel="stylesheet" href="/css/bulma.css">
+</head>
+
+<body>
+
+    <div class="columns">
+        <div class="column is-10 is-offset-1 is-primary">
+            <article class="message is-info">
+                <div class="message-header">
+                    <p>Enter the ID of the video</p>
+                </div>
+                <div id="login-container" class="pre-auth">This application requires access to your YouTube account. Please <a href="#" id="login-link">authorize</a> to continue.
+                </div>
+                <div id="buttons">
+                    <label> <input class="input" id="query" value='qaIRZmJrNfc' type="text"/><button class="button is-info" id="search-button" disabled onclick="search()">Search</button></label>
+                </div>
+                <!-- <div id="search-container" class="column is-8">
+                </div> -->
+                <div id="container">
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="auth.js"></script>
+    <script src="search.js"></script>
+    <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script>
+</body>
+
+</html>
