@@ -1,6 +1,8 @@
 ### YouTube Captionr
 
-**NOTE**: This is in the very early stages of development and is not yet fully functional. I felt like the UI for editing captions in the YouTube dashboard was a bit over complicated for my needs, so while looking at the v3 API I realized I could do a couple of interesting things:
+**NOTE**: This is in the very early stages of development and is not yet fully functional. 
+
+I felt like the UI for editing captions in the YouTube dashboard was a bit over complicated for my needs, so while looking at the v3 API I realized I could do a couple of interesting things:
 
 1. View a [list](https://developers.google.com/apis-explorer/#search/youtube.captions.list/) of the standard captions for any public video by it's ID
 2. [Download](https://developers.google.com/apis-explorer/#search/youtube.captions.download/m/youtube/v3/youtube.captions.download) the captions in several formats for offline editing
