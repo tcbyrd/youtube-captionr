@@ -2,34 +2,77 @@
 <html>
 
 <head>
-    <title>Search</title>
+    <title>Caption Downloader</title>
     <link rel="stylesheet" href="/css/bulma.css">
 </head>
 
 <body>
-
-    <div class="columns">
-        <div class="column is-10 is-offset-1 is-primary">
-            <article class="message is-info">
-                <div class="message-header">
-                    <p>Enter the ID of the video</p>
-                </div>
-                <div id="login-container" class="pre-auth">This application requires access to your YouTube account. Please <a href="#" id="login-link">authorize</a> to continue.
-                </div>
-                <div id="buttons">
-                    <label> <input class="input" id="query" value='qaIRZmJrNfc' type="text"/><button class="button is-info" id="search-button" disabled onclick="search()">Search</button></label>
-                </div>
-                <!-- <div id="search-container" class="column is-8">
-                </div> -->
-                <div id="container">
-                </div>
-            </article>
-        </div>
+    <div id="login-container" class="pre-auth nav-center">This application requires access to your YouTube account. Please <a href="#" id="login-link" style="margin-left: 3px;margin-right: 3px;">authorize</a> to continue.
     </div>
+    <section class="section">
+        <div class="container">
+            <div class="heading">
+                <h1 class="title">YouTube Caption Downloader</h1>
+                <h2 class="subtitle">
+                  Download the auto-generated <span style="font-family:courier">srt</span> file for your videos in multiple languages
+                </h2>
+            </div>
+            <div class="tile is-12 is-vertical is-parent">
+                <div class="tile is-child">
+                    <article class="tile is-child notification is-primary">
+                        <p class="title">Enter the ID of the video</p>
+                        <div class="field has-addons has-addons-centered">
+                            <p class="control">
+                                <span class="select">
+                                  <select id="lang">
+                                    <option value="nl">Dutch</option>
+                                    <option value="en" selected>English</option>
+                                    <option value="fr">French</option>
+                                    <option value="de">German</option>
+                                    <option value="ja">Japanese</option>
+                                    <option value="ru">Russian</option>
+                                    <option value="es">Spanish</option>
+                                    <option value="sv">Swedish</option>
+                                  </select>
+                                </span>
+                            </p>
+                            <p class="control">
+                                <input id="query" class="input" type="text" placeholder="Video ID" value="qaIRZmJrNfc">
+                            </p>
+                            <p class="control">
+                                <button id="search-button" class="button is-info" disabled onclick="search()">
+                                  Search
+                                </button>
+                            </p>
+                        </div>
+                    </article>
+                </div>
+                <div class="columns">
+                    <div class="column">
+                        <div class="card notification is-info">
+                            Original
+                            <textarea id="original-container" class="textarea" style="display:none;height:500px;" readonly="true">
+                            </textarea>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="card notification is-warning">
+                            Edit
+                            <textarea id="edit-container" class="textarea" style="display:none;height:500px;">
+                            </textarea>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-    <script src="auth.js"></script>
-    <script src="search.js"></script>
+    <script src="utf8/utf8.js" charset="utf-8"></script>
+    <script src="auth.js" charset="utf-8"></script>
+    <script src="search.js" charset="utf-8"></script>
     <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script>
 </body>
 
